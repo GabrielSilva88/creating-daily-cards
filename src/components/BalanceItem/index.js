@@ -3,22 +3,23 @@ import { Container, Label, Balance } from "./styles"
 
 export default function BalanceItem({ data }) {
     const labelName = useMemo(() => {
-        if (data.lag === 'saldo') {
+        if (data.tag === 'saldo') {
             return {
-                label: ' Saldo Atual ',
-                color: '#3b3dbf'
+                label: 'Saldo Atual',
+                color: '#0000ff'
             }
         } else if (data.tag === 'receita') {
             return {
-                label: ' Entreadas de Hoje ',
+                label: 'Entreadas de Hoje',
                 color: '#00b94a'
             }
         } else {
             return {
-                label: ' Saidas de Hoje ',
+                label: 'Saidas de Hoje',
                 color: '#EF463a'
             }
         }
+        
     }, [data])
 
     return (
