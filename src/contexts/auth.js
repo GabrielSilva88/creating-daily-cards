@@ -23,7 +23,7 @@ function AuthProvider({ children }) {
                     .catch(() => {
                         setUser(null);
                     })
-                api.defaults.headers['Authorization'] = `Bearer ${token}`;
+                api.defaults.headers['Authorization'] = `Bearer ${storageUser}`;
                 setUser(response.data);
                 setLoading(false);
             }
